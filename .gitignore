@@ -1,0 +1,5 @@
+# BEGIN project-docs managed
+.agents/local/
+# END project-docs managed
+dist/
+.wrangler/

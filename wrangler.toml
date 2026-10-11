@@ -1,0 +1,9 @@
+# Cloudflare Pages: static game from dist/ (python3 build.py), leaderboard API from functions/ backed by D1
+name = "grisaille"
+pages_build_output_dir = "dist"
+compatibility_date = "2026-09-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "grisaille-lb"
+database_id = "e877cc22-1539-4150-b906-81773e27f1f6"

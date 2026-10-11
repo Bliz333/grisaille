@@ -1,0 +1,4 @@
+-- D1 schema for the leaderboard: npx wrangler d1 execute grisaille-lb --remote --file schema.sql
+CREATE TABLE IF NOT EXISTS runs (id TEXT PRIMARY KEY, t0 INTEGER NOT NULL, used INTEGER NOT NULL DEFAULT 0);
+CREATE TABLE IF NOT EXISTS scores (id INTEGER PRIMARY KEY AUTOINCREMENT, nick TEXT NOT NULL, score INTEGER NOT NULL, depth INTEGER NOT NULL, win INTEGER NOT NULL, diff INTEGER NOT NULL, heat INTEGER NOT NULL, kills INTEGER NOT NULL, secs INTEGER NOT NULL, at INTEGER NOT NULL);
+CREATE INDEX IF NOT EXISTS scores_rank ON scores (score DESC, at);
